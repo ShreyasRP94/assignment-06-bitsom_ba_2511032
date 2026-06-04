@@ -123,7 +123,7 @@ Requirements:
 
 ### 1.2 Iteration Documentation
 
-Scenrario A : Technical Explanation
+**Scenrario A : Technical Explanation**
 
 | Version | Prompt                                                                             | What Changed                                       | Why This Improved the Output                           |
 | ------- | ---------------------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------ |
@@ -131,7 +131,7 @@ Scenrario A : Technical Explanation
 | V2      | Explain neural networks to a 10-year-old child using simple language and examples. | Added audience and simplicity requirements.        | Produced a more understandable explanation.            |
 | V3      | Added expert teacher role, analogy requirement, word limit, and fun example.       | Added role assignment and structured instructions. | Improved clarity, engagement, and age appropriateness. |
 
-Scenario B: Professional Email
+**Scenario B: Professional Email**
 
 | Version | Prompt                                                                            | What Changed                            | Why This Improved the Output                   |
 | ------- | --------------------------------------------------------------------------------- | --------------------------------------- | ---------------------------------------------- |
@@ -140,7 +140,7 @@ Scenario B: Professional Email
 | V3      | Added HR role, candidate context, future interest, tone, and length requirements. | Added context and detailed constraints. | Produced a realistic, polished business email. |
 
 
-Scenario C: Creative Content
+**Scenario C: Creative Content**
 
 | Version | Prompt                                                                               | What Changed                                | Why This Improved the Output                              |
 | ------- | ------------------------------------------------------------------------------------ | ------------------------------------------- | --------------------------------------------------------- |
@@ -154,3 +154,57 @@ Scenario C: Creative Content
 Role assignment significantly improved the quality of responses by guiding the model to adopt the expertise and communication style appropriate for the task. In Scenario A, assigning the role of an elementary school teacher resulted in a more engaging and age-appropriate explanation. In Scenario C, assigning the role of an advertising copywriter produced more creative and marketable taglines.
 
 Context setting further enhanced output quality by providing background information about the audience, objectives, and constraints. For the job-offer email, contextual details helped generate a realistic professional response that balanced gratitude, rejection, and future interest. Overall, combining role assignment with contextual information reduced ambiguity and produced outputs that were more accurate, relevant, and aligned with the intended purpose.
+
+
+## Part 2: Temperature & Parameter Control
+
+### 2.1 Temperature Experimentation
+
+**Selected Task**
+
+Create a short story opening (2–3 sentences).
+
+**Base Prompt** : Write the opening of a short story in 2-3 sentences about a mysterious door that appears overnight in a small town.
+
+**Low Temperature (0.2)**
+
+Prompt Used : Write the opening of a short story in 2-3 sentences about a mysterious door that appears overnight in a small town. Be precise and consistent.
+
+Temperature: 0.2
+
+Output : When the residents of Maple Creek woke up on Monday morning, they found a wooden door standing alone in the center of the town square. No one knew where it had come from, and no buildings nearby were missing a door. By noon, the entire town was gathered around it, searching for answers.
+
+**Medium Temperature (0.7)**
+
+Prompt Used : Write the opening of a short story in 2-3 sentences about a mysterious door that appears overnight in a small town.
+
+Temperature: 0.7
+
+Output : The door appeared sometime between midnight and dawn, standing silently beside the old fountain in the middle of town. Its dark blue paint shimmered strangely in the morning sunlight, and no one could remember seeing it before. By evening, rumors about what lay behind it had spread faster than the town newspaper.
+
+**High Temperature (1.3)**
+
+Prompt Used : Write the opening of a short story in 2-3 sentences about a mysterious door that appears overnight in a small town. Be creative and explore diverse ideas.
+
+Temperature: 1.3
+
+Output : On the morning the lavender-colored door arrived, every clock in Willow Bend had stopped at exactly 3:17 a.m. Tiny golden moths circled its brass handle, whispering sounds that resembled forgotten songs, while strange footprints appeared in spirals around it. Nobody dared open it, yet everyone dreamed about what waited on the other side.
+
+**Comparison Table**
+
+| Aspect         | Low Temperature   | Medium Temperature | High Temperature        |
+| -------------- | ----------------- | ------------------ | ----------------------- |
+| Language Style | Simple and direct | Descriptive        | Highly imaginative      |
+| Creativity     | Limited           | Moderate           | Extensive               |
+| Story Elements | Realistic         | Some mystery       | Strong fantasy elements |
+| Consistency    | Very high         | High               | Moderate                |
+| Originality    | Moderate          | Good               | Excellent               |
+
+
+### 2.2 Analysis & Recommendations
+
+Low temperature settings are most useful when accuracy, consistency, and reliability are important. Two common use cases are generating SQL queries and creating technical documentation, where factual correctness is more important than creativity. Because the model produces more deterministic outputs, the results are easier to reproduce and verify.
+
+High temperature settings are most useful when generating creative content and brainstorming new ideas. Two common use cases are writing stories and creating advertising or marketing slogans, where originality and diversity are desirable. Higher temperatures encourage the model to explore less common patterns and produce more varied responses.
+
+For this experiment, the medium temperature (0.7) produced the best result. It generated an engaging story opening with descriptive details while maintaining logical coherence. The low temperature output was accurate but somewhat plain, whereas the high temperature output was highly imaginative but less predictable. Therefore, the medium setting provided the best balance between creativity and readability.
