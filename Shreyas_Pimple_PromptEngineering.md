@@ -208,3 +208,153 @@ Low temperature settings are most useful when accuracy, consistency, and reliabi
 High temperature settings are most useful when generating creative content and brainstorming new ideas. Two common use cases are writing stories and creating advertising or marketing slogans, where originality and diversity are desirable. Higher temperatures encourage the model to explore less common patterns and produce more varied responses.
 
 For this experiment, the medium temperature (0.7) produced the best result. It generated an engaging story opening with descriptive details while maintaining logical coherence. The low temperature output was accurate but somewhat plain, whereas the high temperature output was highly imaginative but less predictable. Therefore, the medium setting provided the best balance between creativity and readability.
+
+
+## Part 3: Strategic Prompting Techniques
+
+### 3.1 Chain-of-Thought Prompting
+
+**Selected Problem**
+
+A company has 150 employees. 60% work in engineering, 25% in sales, and the rest in operations. If the company plans to hire 20% more engineers and 10% more sales people, how many total employees will there be after hiring?
+
+**Without Chain-of-Thought**
+
+Prompt : A company has 150 employees. 60% work in engineering, 25% in sales, and the rest in operations. If the company plans to hire 20% more engineers and 10% more sales people, how many total employees will there be after hiring? Provide only the final answer.
+
+LLM Output : 172 employees
+
+**With Chain-of-Thought**
+
+Prompt : A company has 150 employees. 60% work in engineering, 25% in sales, and the rest in operations.
+
+Let's solve this step by step.
+
+Show all calculations clearly before giving the final answer.
+
+LLM Output : 
+
+Engineering employees:
+
+60% of 150 = 90
+
+Sales employees:
+
+25% of 150 = 37.5
+
+Operations employees:
+
+150 − 90 − 37.5 = 22.5
+
+New engineering hires:
+
+20% of 90 = 18
+
+New sales hires:
+
+10% of 37.5 = 3.75
+
+Total new hires:
+
+18 + 3.75 = 21.75
+
+Total employees after hiring:
+
+150 + 21.75 = 171.75
+
+Rounded to the nearest whole employee:
+
+172 employees
+
+**Comparison**
+
+The non-chain-of-thought prompt produced only the final answer, making it impossible to verify how the model arrived at the result. The chain-of-thought prompt generated intermediate calculations and reasoning steps, improving transparency and making it easier to identify potential mistakes. Chain-of-thought prompting is especially useful for mathematical, logical, and multi-step business problems because it encourages structured reasoning. One limitation is that it increases response length and may occasionally include unnecessary intermediate details for simple problems.
+
+### 3.2 Few-Shot Prompting
+
+**Step 1: Zero-Shot Attempt**
+
+Prompt : 
+
+Classify each customer review as Positive, Negative, or Neutral.
+
+Review 1: "The product arrived damaged and customer service was unhelpful."
+
+Review 2: "Works as expected, nothing special but does the job."
+
+Review 3: "Absolutely love this! Best purchase I've made all year!"
+
+Review 4: "The quality is okay but slightly overpriced for what you get."
+
+Review 5: "Terrible experience, would not recommend to anyone."
+
+Zero-Shot Results
+
+| Review | Classification |
+| ------ | -------------- |
+| 1      | Negative       |
+| 2      | Neutral        |
+| 3      | Positive       |
+| 4      | Negative       |
+| 5      | Negative       |
+
+**Step 2: Few-Shot Attempt**
+
+Prompt :
+
+Classify customer reviews as Positive, Negative, or Neutral.
+
+Examples:
+
+Review: "This product exceeded my expectations!"
+Sentiment: Positive
+
+Review: "Completely broke after one week of use."
+Sentiment: Negative
+
+Review: "It's fine, does what it says on the box."
+Sentiment: Neutral
+
+Review: "Excellent quality and fast delivery."
+Sentiment: Positive
+
+Review: "Customer support never responded to my complaint."
+Sentiment: Negative
+
+Now classify the following reviews:
+
+Review 1: "The product arrived damaged and customer service was unhelpful."
+
+Review 2: "Works as expected, nothing special but does the job."
+
+Review 3: "Absolutely love this! Best purchase I've made all year!"
+
+Review 4: "The quality is okay but slightly overpriced for what you get."
+
+Review 5: "Terrible experience, would not recommend to anyone."
+
+Few-Shot Results
+
+| Review | Classification |
+| ------ | -------------- |
+| 1      | Negative       |
+| 2      | Neutral        |
+| 3      | Positive       |
+| 4      | Neutral        |
+| 5      | Negative       |
+
+
+**Step 3: Analysis**
+
+| Review # | Zero-Shot Result | Few-Shot Result | Correct Label | Improved? |
+| -------- | ---------------- | --------------- | ------------- | --------- |
+| 1        | Negative         | Negative        | Negative      | No        |
+| 2        | Neutral          | Neutral         | Neutral       | No        |
+| 3        | Positive         | Positive        | Positive      | No        |
+| 4        | Negative         | Neutral         | Neutral       | Yes       |
+| 5        | Negative         | Negative        | Negative      | No        |
+
+
+**Discussion**
+
+Few-shot prompting is most useful when a task requires consistent interpretation, formatting, or classification rules that may not be obvious from the prompt alone. By providing examples, the model can infer the desired pattern and apply it to new inputs more accurately. Few-shot prompting is particularly valuable for sentiment analysis, information extraction, document classification, and domain-specific tasks where subtle distinctions need to be learned from examples.
