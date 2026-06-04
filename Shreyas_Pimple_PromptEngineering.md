@@ -12,7 +12,9 @@ This portfolio demonstrates prompt engineering techniques using ChatGPT (GPT-5.5
 
 ### 1.1 Scenario A: Technical Explanation
 Initial Prompt: Explain neural networks.
+
 Refined Prompt 1: Explain neural networks to a 10-year-old child using simple language and examples.
+
 Refined Prompt 2: You are an expert elementary school teacher.
 
 Explain neural networks to a 10-year-old child.
