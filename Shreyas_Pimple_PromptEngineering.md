@@ -76,4 +76,47 @@ I would like to express my gratitude for your confidence in my abilities and for
 Thank you once again for your consideration. I wish you and your team continued success.
 
 Kind regards,
+
 Shreyas Pimple
+
+### 1.1 Scenario C: Creative Content
+
+**Initial Prompt**: Create a tagline for an eco-friendly water bottle.
+
+**Refined Prompt 1**: Create a catchy and memorable tagline for a premium eco-friendly water bottle brand.
+
+**Refined Prompt 2**: You are an award-winning advertising copywriter.
+
+Create 10 marketing taglines for a premium eco-friendly water bottle brand.
+
+Context:
+- Target audience: environmentally conscious young professionals.
+- Brand values: sustainability, style, and innovation.
+- Tone: modern, inspiring, and memorable.
+
+Requirements:
+- Maximum 8 words per tagline.
+- Avoid clichés.
+- Make each tagline unique.
+
+**Final Output from LLM:** 
+
+1. Drink Smart. Leave Less Behind.
+
+2. Hydration with a Smaller Footprint.
+
+3. Refill Today. Protect Tomorrow.
+
+4.Style Meets Sustainability.
+
+5.Carry Water. Carry Change.
+
+6.Every Sip Shapes the Future.
+
+7.Sustainable by Design.
+
+8.Drink Clean. Live Green.
+
+9.Better Bottles for a Better Planet.
+
+10. Hydrate Responsibly.
