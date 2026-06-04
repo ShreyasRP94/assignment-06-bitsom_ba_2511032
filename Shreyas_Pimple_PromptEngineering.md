@@ -107,16 +107,50 @@ Requirements:
 
 3. Refill Today. Protect Tomorrow.
 
-4.Style Meets Sustainability.
+4. Style Meets Sustainability.
 
-5.Carry Water. Carry Change.
+5. Carry Water. Carry Change.
 
-6.Every Sip Shapes the Future.
+6. Every Sip Shapes the Future.
 
-7.Sustainable by Design.
+7. Sustainable by Design.
 
-8.Drink Clean. Live Green.
+8. Drink Clean. Live Green.
 
-9.Better Bottles for a Better Planet.
+9. Better Bottles for a Better Planet.
 
 10. Hydrate Responsibly.
+
+### 1.2 Iteration Documentation
+
+Scenrario A : Technical Explanation
+
+| Version | Prompt                                                                             | What Changed                                       | Why This Improved the Output                           |
+| ------- | ---------------------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------ |
+| V1      | Explain neural networks.                                                           | N/A                                                | N/A                                                    |
+| V2      | Explain neural networks to a 10-year-old child using simple language and examples. | Added audience and simplicity requirements.        | Produced a more understandable explanation.            |
+| V3      | Added expert teacher role, analogy requirement, word limit, and fun example.       | Added role assignment and structured instructions. | Improved clarity, engagement, and age appropriateness. |
+
+Scenario B: Professional Email
+
+| Version | Prompt                                                                            | What Changed                            | Why This Improved the Output                   |
+| ------- | --------------------------------------------------------------------------------- | --------------------------------------- | ---------------------------------------------- |
+| V1      | Write an email declining a job offer.                                             | N/A                                     | N/A                                            |
+| V2      | Write a professional email declining a job offer while thanking the company.      | Added professionalism and gratitude.    | Improved tone and courtesy.                    |
+| V3      | Added HR role, candidate context, future interest, tone, and length requirements. | Added context and detailed constraints. | Produced a realistic, polished business email. |
+
+
+Scenario C: Creative Content
+
+| Version | Prompt                                                                               | What Changed                                | Why This Improved the Output                              |
+| ------- | ------------------------------------------------------------------------------------ | ------------------------------------------- | --------------------------------------------------------- |
+| V1      | Create a tagline for an eco-friendly water bottle.                                   | N/A                                         | N/A                                                       |
+| V2      | Create a catchy and memorable tagline for a premium eco-friendly water bottle brand. | Added brand positioning.                    | Generated stronger marketing language.                    |
+| V3      | Added copywriter role, target audience, brand values, tone, and output constraints.  | Added role assignment and business context. | Produced creative, targeted, and differentiated taglines. |
+
+
+### 1.3 Role and Context Analysis
+
+Role assignment significantly improved the quality of responses by guiding the model to adopt the expertise and communication style appropriate for the task. In Scenario A, assigning the role of an elementary school teacher resulted in a more engaging and age-appropriate explanation. In Scenario C, assigning the role of an advertising copywriter produced more creative and marketable taglines.
+
+Context setting further enhanced output quality by providing background information about the audience, objectives, and constraints. For the job-offer email, contextual details helped generate a realistic professional response that balanced gratitude, rejection, and future interest. Overall, combining role assignment with contextual information reduced ambiguity and produced outputs that were more accurate, relevant, and aligned with the intended purpose.
